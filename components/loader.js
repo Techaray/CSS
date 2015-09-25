@@ -8,6 +8,8 @@
 
 /*** <Start:monaca-cordova-loader> ***/
 /*** <Start:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
+
+
 (function(){
   if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/iPhone|iPad|iPod/i))) {
     if (typeof location.href === "string") {
