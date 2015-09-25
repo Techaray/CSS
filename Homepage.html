@@ -1,0 +1,20 @@
+<ons-navigator>
+   <ons-page>
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button ng-click="app.slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+            </div>
+
+            <div class="center">Complete Secure Solutions</div>
+        </ons-toolbar>
+        
+
+        <div style="text-align: center;margin-top: 32%;">
+            <img src="images/logo.png" alt="">
+            <ons-list-item class="custom-button">
+            <ons-list-item onclick="app.slidingMenu.setMainPage('Menu.html', {closeMenu: true})">Menu</ons-list-item>
+        </ons-list-item>
+        
+        </div>
+    </ons-page>
+</ons-navigator>

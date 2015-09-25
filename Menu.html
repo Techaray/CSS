@@ -1,0 +1,28 @@
+<ons-navigator>
+   <ons-page>
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button ng-click="app.slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+            </div>
+
+            <div class="center">Menu</div>
+        </ons-toolbar>
+        
+
+        <div style="text-align: center">
+        <ons-list-item class="custom-button">
+            <ons-list-item onclick="app.slidingMenu.setMainPage('Kitcode.html', {closeMenu: true})">Kit Code(Add Info.)</ons-list-item>
+        </ons-list-item>
+        <ons-list-item class="custom-button">
+            <ons-list-item onclick="app.slidingMenu.setMainPage('Aboutus.html', {closeMenu: true})">About Us</ons-list-item>
+        </ons-list-item>
+        <ons-list-item class="custom-button">
+            <ons-list-item onclick="app.slidingMenu.setMainPage('Contactus.html', {closeMenu: true})">Contact Us</ons-list-item>
+        </ons-list-item>
+        
+        </div>
+        <div style="text-align: center;margin-top: 10%;">
+            <img src="images/logo.png" alt="">
+        </div>
+    </ons-page>
+</ons-navigator>

@@ -802,7 +802,7 @@ h6 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: rgba(24,103,194,0.81);
+  background-color: rgb(0,73,35);
   border: 0px solid currentColor;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -3982,4 +3982,67 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   text-align: center;
   color: #fff;
   white-space: normal;
+}
+.custom-button {
+    border-bottom: 1px solid #ddd !important;
+    border-top: 1px solid #ddd !important;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px !important;
+    margin-bottom: -1px;
+}
+
+.custom-button::before {
+    color: #ddd;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: normal;
+    height: 28px;
+    line-height: 28px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.custom-button ons-list-item {
+    color: gray;
+}
+.inner-content {
+    color: gray;
+    padding: 21px;
+}
+.form-control {
+    width: 100%;
+}
+
+
+/* */
+.error-container {
+  margin: 5px 0;
+}
+ 
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #555;
+  vertical-align: middle;
+}
+ 
+.error i {
+  font-size: 24px;
+  color: #B83E2C;  
+  vertical-align: middle;
+}
+ 
+.has-errors {
+  border-bottom: 3px solid #B83E2C !important;
+}
+ 
+.no-errors {
+  border-bottom: 3px solid green !important;
 }
