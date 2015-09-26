@@ -19,7 +19,7 @@ function saveData()
       'alternate_mobile': $('#alternate_mobile').val()
       };
 
-    $.ajax({
+    /*$.ajax({
           type: 'GET',
           url: 'http://insdata.testingwebsitedesign.com/save',
           crossDomain: true,
@@ -30,5 +30,7 @@ function saveData()
           success: function(data) {
           window.location.href = "Thankyou.html";
           }
-        });
+        });*/
+
+alert($('#alternate_mobile').val());
 }
