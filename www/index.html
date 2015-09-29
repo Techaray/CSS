@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/default.js"></script>
+    
+    <script>
+        ons.bootstrap(); 
+    </script>
+</head>
+<body>
+   <ons-sliding-menu
+  menu-page="menu.html" main-page="Homepage.html" side="left"
+  var="menu" type="reveal" max-slide-distance="260px" swipable="true">
+</ons-sliding-menu>
+
+<ons-template id="menu.html">
+  <ons-page modifier="menu-page">
+    <ons-toolbar modifier="transparent"></ons-toolbar>
+
+    <ons-list class="menu-list">
+      <ons-list-item class="menu-item" ng-click="menu.setMainPage('Homepage.html', {closeMenu: true})">
+        <ons-icon icon="fa-plus"></ons-icon>
+        Home
+      </ons-list-item>
+
+      <ons-list-item class="menu-item" ng-click="menu.setMainPage('Kitcode.html', {closeMenu: true})">
+        <ons-icon icon="fa-bookmark"></ons-icon>
+        Kitcode(Add Info.)
+      </ons-list-item>
+
+    <ons-list-item class="menu-item" ng-click="menu.setMainPage('Aboutus.html', {closeMenu: true})">
+        <ons-icon icon="fa-bookmark"></ons-icon>
+        About Us <!--<div class="notification menu-notification">3</div>-->
+      </ons-list-item>        
+
+      <ons-list-item class="menu-item" ng-click="menu.setMainPage('Contactus.html', {closeMenu: true})">
+        <ons-icon icon="fa-bookmark"></ons-icon>
+        Contact Us
+      </ons-list-item>
+    </ons-list>
+  </ons-page>
+</ons-template>
+
+
+<ons-template id="Homepage.html">
+  <ons-page>
+    <ons-navigator var="myNav">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()">
+          <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">Complete Secure Solutions</div>
+      <!--<div class="right">
+        <ons-toolbar-button>
+            <ons-icon icon="refresh" size="30px" fixed-width="true"></ons-icon>
+        </ons-toolbar-button>
+      </div>-->
+    </ons-toolbar>
+
+    <div style="text-align: center;margin-top: 32%;">
+        <img src="images/logo.png" alt="">
+        <ons-list-item class="custom-button">
+            <ons-list-item ng-click="myNav.pushPage('Menu.html')">Menu</ons-list-item>
+    	</ons-list-item>
+    </div>
+    </ons-navigator>
+  </ons-page>
+  
+</ons-template>
+
+<ons-template id="Menu.html">
+  <ons-page>
+     <ons-toolbar>
+        <div class="right" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Menu</div>
+        <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()">
+          <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      </ons-toolbar>
+       <div style="text-align: center">
+        <ons-list-item class="custom-button">
+            <ons-list-item ng-click="myNav.pushPage('Kitcode.html')">Kit Code(Add Info.)</ons-list-item>
+        </ons-list-item>
+        <ons-list-item class="custom-button">
+            <ons-list-item ng-click="myNav.pushPage('Aboutus.html')">About Us</ons-list-item>
+        </ons-list-item>
+        <ons-list-item class="custom-button">
+            <ons-list-item ng-click="myNav.pushPage('Contactus.html')">Contact Us</ons-list-item>
+        </ons-list-item>
+        
+        </div>
+        <div style="text-align: center;margin-top: 10%;">
+            <img src="images/logo.png" alt="">
+        </div>
+  </ons-page>
+</ons-template>
+
+<ons-template id="Aboutus.html">
+  <ons-page>
+     <ons-toolbar>
+        <div class="right" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">About Us</div>
+        <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()">
+          <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      </ons-toolbar>
+      <div style="text-align: center" class="inner-content">
+         <h2>We've built a lot of things in the past 2 years, The most important is trust
+
+        </h2>
+        
+        <p><b>WHO ARE WE?</b><br>
+            
+        Complete Secure Solutions is founded in 2013 is a business conglomerate with diversified interest in Telecom, Insurance, Real Estate. The group also has business interests in diverse areas including FMCG and is coming up with new ventures in Handsets, Insurance &amp; many more.
+        The Group has carved a niche through its customer centric approach and hi-end quality services. Customer focus, product superiority, operational excellence and knowledge management have been the strongest values that Complete Secure lives up to. The creative thinking, convictions and commitments of its highly qualified group of professionals has helped the company conquer new heights
+        Complete Secure Solutions Group demonstrates strong leadership globally and emerges as a focused corporate, leveraging its knowledge, leadership and operations to add lasting value for its stakeholders and investors. The Group operates in 4 regions, with more than 300+ employees and a turnover of 1.5 Billion.
+        Complete Secure Solutions Group is a firm with many facts, with each business division changing the way we live and work through its own unique contributions. But no matter what each business does, all are united by a single, driving passion: to continue to deliver the world’s most innovative and substantial solution's.
+        </p>
+        
+        <h2><b>Vision, Mission &amp; Values</b></h2><b><br>
+        <h3>Complete Secure Solution's Vision</h3>
+        To Offer World Class Services to our Customers, With Best Margins &amp; Profitability to our Channel Partners &ndash; Satisfaction at all levels.    <p></p>
+        
+        <h3>Complete Secure Solutions Vision</h3>
+        To be the most admired &amp; trusted group in all segments of Operations.   <p></p>
+        
+        
+        <h2><b>About Complete Secure Solutions:-</b></h2><b><br>
+        <h3>The Hassle-Free Mobile Insurance
+        </h3><br>
+        • CSS with insurance covering your smartphone for 1 year<br>
+        •    All Risk Coverage (Theft, Burglary, Liquid Damage, Physical Damage) (Note - Theft and Burglary not covered for devices costing less than Rs. 5,000)<br>
+        •    Policy effective immediately after filling the form on Company's Web site ( www.completesecuresolution's.com )<br>
+        •	Cover also includes damage repair costs<br>
+        •	In cases of theft or burglary or damage beyond repair, settlement is based on device value less depreciation<br>
+        
+        <h2>Settling Your Claim is Easy</h2><br>
+        •	Easy settlements with a fast turnaround time<br>
+        •	All Claims: 95% within 21 days<br>
+        •	Cashless Claims: Approval for repair within 48 hours<br>
+        •	Cashless damage cover: Processed within 10 days<br>
+        •	Dedicated toll free customer support handling 5000 calls per month<br>
+        •	Industry's only end to end online claim and service management system<br>
+        
+        <h2>India's Most Trusted Mobile Insurance</h2><br>
+        Founded in 2014, we are India's most trusted mobile insurance and security app provider. Spread across 4 Region &amp; 19 States, trusted and sold by 40000 retailers.<br>
+        •	Aspire to cover 1000+crore rupees of handsets in fiscal year.<br>
+        •	We have 65000 delighted customers associated.<br>
+        •	Success rate of 90% claim settlement within the SLA.<br>
+        •	1200 service centres spread across 350+ cities and expanding.<br>
+        •	100% claim settlement ratio for genuine claims (Industry's best claim rates)<br>
+        Insurance is provided by Oriental Assurance company. Claims and service expedited by Complete Secure Solutions. Final claim determination and settlement by  Oriental Insurance Company and according to terms of the policy.
+
+        </b></b>        
+        </div>
+        <div style="text-align: center;margin-top: 10%;">
+            <img src="images/logo.png" alt="">
+        </div>
+  </ons-page>
+</ons-template>
+<ons-template id="Contactus.html">
+  <ons-page>
+     <ons-toolbar>
+        <div class="right" style="line-height: 44px">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Contact Us</div>
+        <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()">
+          <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      </ons-toolbar>
+      <div style="text-align: center;margin-top: 10%;">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div style="text-align: center" class="inner-content">
+        <p>
+            <h4>Toll free number <br /> 1800-137-1379</h4>
+             <h5>
+                Complete Secure Solution Pvt. Ltd.<br />
+                Head Office- Aakash Avenue,<br />
+                Near Tata Mall<br />
+                Hydrabad.
+            </h5>
+            <h5>
+                Branch Office- 8th Floor,Nehru 
+                place Ashoka Building <br />
+                New Delhi.
+            </h5>
+            
+            <h5>
+                Branch Office- C-127, 3rd Floor 
+                Phase-8, Industrial Area <br />
+                Mohali.
+            </h5>
+            
+            <h5>
+                Branch Office- SF- 1679, Solitare
+                Towers<br />
+                Chennai.
+            </h5>
+        </p> 
+        </div>
+  </ons-page>
+</ons-template>
+
+<!--<ons-template id="browsehotels.html">
+  <ons-navigator var="myNav">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()">
+          <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">Browse hotels</div>
+      <div class="right">
+        <ons-toolbar-button>
+            <ons-icon icon="refresh" size="30px" fixed-width="true"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+       <ons-list>
+        <ons-list-item ng-click="myNav.pushPage('newpage.html')">
+             hotels - Some list item
+        </ons-list-item>
+         <ons-list-item ng-click="myNav.pushPage('newpage2.html')">
+             hotels - Some list item2
+        </ons-list-item>
+         <ons-list-item ng-click="myNav.pushPage('home.html')">
+     back to home
+ </ons-list-item>
+    </ons-list>
+    
+  </ons-page>
+  </ons-navigator>
+</ons-template>-->
+</body>
+</html>

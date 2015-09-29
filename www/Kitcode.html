@@ -1,44 +1,55 @@
-<ons-navigator>
-   <ons-page>
-        <ons-toolbar>
-            <div class="left">
-                <ons-toolbar-button ng-click="app.slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
-            </div>
-
-            <div class="center">Submit Information</div>
-        </ons-toolbar>
-        <div style="text-align: center;margin-top: 5;">
+<ons-page>
+ <ons-toolbar>
+    <div class="right" style="line-height: 44px">
+      <ons-back-button>Back</ons-back-button>
+    </div>
+    <div class="center">Contact Us</div>
+    <div class="left">
+    <ons-toolbar-button ng-click="menu.toggle()">
+      <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+    </ons-toolbar-button>
+  </div>
+  </ons-toolbar>
+ <div style="text-align: center;margin-top: 5;">
             <img style="width:29%" src="images/logo.png" alt="">
         </div>
         <div style="text-align: center" class="inner-content">
        <form  id="offer_ride_form" onsubmit="saveData()">
       <div id="submit-field-form">
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Product Type</label>
+                <div class="col-md-6">
+                   <select class="form-control" id="product_type" onchange="hideShowDetails()" name="product_type" required>
+                    <option value="MOBILE">Mobile</option>
+                    <option value="TAB">Tab</option>
+                    <option value="LAPTOP">Laptop</option>
+                    <option value="WASHING_MACHINE">Washing Machine</option>
+                    <option value="REFRIGRATOR">Refrigrator</option>
+                    <option value="AC">A.C</option>
+                    <option value="LCD/LED">LCD/LED</option>
+                  </select> 
+                </div>
+              </div>
+      
+            <div class="form-group">
+                <label class="col-md-4 control-label">Kit Code</label>
+                <div class="col-md-6">
+                  <input type="text" placeholder="E.g. CSS19900001" id="kit_code" onblur="upatePackage()" class="form-control" name="kit_code" value="" required>
+                </div>
+             </div>
+      
       <div class="form-group">
                 <label class="col-md-4 control-label">Packages</label>
                 <div class="col-md-6">
-                   <select class="form-control" id="packages" name="packages" required>
-                    <option value="199">Plan 199</option>
-                    <option value="399">Plan 399</option>
-                    <option value="599">Plan 599</option>
-                    <option value="899">Plan 899</option>
-                    <option value="1099">Plan 1099</option>
-                    <option value="1499">Plan 1499</option>
-                    <option value="1999">Plan 1999</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="col-md-4 control-label">Kit Code</label>
-                <div class="col-md-6">
-                  <input type="text" id="kit_code" class="form-control" name="kit_code" value="" required>
+                   <input type="text" class="form-control" id="packages" name="packages" required readonly>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-md-4 control-label">Invoice Value</label>
                 <div class="col-md-6">
-                  <input type="text" id="invoice_value" class="form-control" name="invoice_value" value="" required>
+                  <input type="text" id="invoice_value" placeholder="Only Numeric" onkeyup='return validateQty(this);' class="form-control" name="invoice_value" value="" required>
                 </div>
               </div>
 
@@ -59,7 +70,9 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Date Of Purchase</label>
                 <div class="col-md-6">
-                  <input type="text" id="date_of_purchase" class="form-control" name="date_of_purchase" value="" required>
+                  <select onfocus="getDates()" id="date_of_purchase" class="form-control" name="date_of_purchase" value="" required>
+                  <option selected="true" disabled="disabled">Select Date</option>
+                  </select>
                 </div>
               </div>
 
@@ -71,21 +84,6 @@
                     <option value="Window">Window</option>
                     <option value="IOS">IOS</option>
                   </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="col-md-4 control-label">Product Type</label>
-                <div class="col-md-6">
-                   <select class="form-control" id="product_type" name="product_type" required>
-                    <option value="MOBILE">Mobile</option>
-                    <option value="TAB">Tab</option>
-                    <option value="LAPTOP">Laptop</option>
-                    <option value="WASHING_MACHINE">Washing Machine</option>
-                    <option value="REFRIGRATOR">Refrigrator</option>
-                    <option value="AC">A.C</option>
-                    <option value="LCD/LED">LCD/LED</option>
-                  </select> 
                 </div>
               </div>
 
@@ -113,7 +111,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Email</label>
                 <div class="col-md-6">
-                  <input type="text" id="email" class="form-control" name="email" required>
+                  <input type="email" id="email" class="form-control" name="email" required>
                 </div>
               </div>
 
@@ -123,7 +121,7 @@
                   <input type="text" id="mobile_number" class="form-control" name="mobile_number" required>
                 </div>
               </div>
-
+              
               <div class="form-group">
                 <label class="col-md-4 control-label">Alternate Mobile</label>
                 <div class="col-md-6">
@@ -166,14 +164,22 @@
               </div>
             </div>
 
+            <div class="form-group">
+                <label class="col-md-4 control-label">
+                  <input type="checkbox" required>
+                  <span>I hereby confirm that the details furnished by me are correct and In case any of the above information is found to be false or untrue or misleading or misrepresenting, I am aware that I may be held liable for it, I also Confirms that I have read  Terms and Conditions Completely.</span>
+                </label>
+              </div>
+
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-4 text-center">
                   <input  type='submit' name="offer_ride" value="Submit" class="submit-button">
                 </div>
               </div>
+
+              
       
     </form>
     
         </div>
-    </ons-page>
-</ons-navigator>
+</ons-page>
